@@ -1,0 +1,26 @@
+{
+  "name": "order-management-challenge",
+  "version": "1.0.0",
+  "description": "Desafio Técnico Backend",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=24.3.0",
+    "npm": ">=11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OliverioJunior/order-management-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OliverioJunior/order-management-challenge/issues"
+  },
+  "homepage": "https://github.com/OliverioJunior/order-management-challenge#readme"
+}
