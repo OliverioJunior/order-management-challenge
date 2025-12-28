@@ -8,7 +8,6 @@
     "node": ">=24.3.0",
     "npm": ">=11.4.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/OliverioJunior/order-management-challenge/issues"
   },
-  "homepage": "https://github.com/OliverioJunior/order-management-challenge#readme"
+  "homepage": "https://github.com/OliverioJunior/order-management-challenge#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
