@@ -9,11 +9,15 @@
     "npm": ">=11.4.2"
   },
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "concurrently \"npm run dev:db\" \"npm run dev:server\"",
+    "dev:server": "tsx watch src/server.ts",
+    "dev:db": "docker-compose up -d mongodb",
     "build": "tsc",
     "start": "node dist/server.js",
     "lint": "eslint src",
-    "format": "prettier --write src"
+    "format": "prettier --write src",
+    "docker:stop": "docker-compose down",
+    "docker:clean": "docker-compose down -v"
   },
   "repository": {
     "type": "git",
@@ -27,18 +31,25 @@
   },
   "homepage": "https://github.com/OliverioJunior/order-management-challenge#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^25.0.3",
+    "@vitest/coverage-v8": "^4.0.16",
     "@vitest/eslint-plugin": "^1.6.4",
+    "@vitest/ui": "^4.0.16",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "prettier": "^3.7.4",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.50.1"
+    "typescript-eslint": "^8.50.1",
+    "vitest": "^4.0.16"
   }
 }
