@@ -1,14 +1,16 @@
+import 'dotenv/config';
 import express from 'express';
-import userRoutes from './routes/userRoutes.js';
-
+import connectDB from './config/database';
+import statusRoutes from './routes/statusRoutes.ts';
 const app = express();
-
 app.use(express.json());
 
-app.use('/api/users', userRoutes);
-
 app.get('/', (req, res) => {
+
     res.json({ message: 'Express + TypeScript Server' });
 });
+
+app.use('/status', statusRoutes);
+connectDB();
 
 export default app;

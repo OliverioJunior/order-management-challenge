@@ -6,3 +6,9 @@ logs
 
 # Environment variables
 .env
+
+# Build output
+dist
+
+# Test coverage
+coverage
