@@ -5,7 +5,6 @@ const router = Router();
 
 router.get('/', (req: Request, res: Response) => {
     const dbConnection = checkDatabaseConnection();
-
     if (dbConnection.stateCode !== 1) {
         return res.status(503).json({
             message: "Service Unavailable",
