@@ -31,7 +31,6 @@ describe("GET /status", () => {
         });
 
         const response = await request(app).get("/status");
-
         expect(response.status).toBe(503);
         expect(response.body).toEqual({
             message: "Service Unavailable",
